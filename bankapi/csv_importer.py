@@ -10,7 +10,7 @@ def csv_importer(request):
     try:
         df = pd.read_csv('static/csv/bank_branches.csv')
         banks_data = []
-        for index, row in df[:10000].iterrows():
+        for index, row in df[:100].iterrows():
             bank = Banks(
                 ifsc=row['ifsc'],
                 bank_id=row['bank_id'],
